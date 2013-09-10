@@ -1,6 +1,8 @@
 # git-perm-rm
 
-Permanently remove a file or directory from a git repo.
+Permanently remove a file or directory from a git repo including all related commit records.
+
+It's a very usefull script to get your git repo more sexy and slim, but at the meantime, it is dangerous and irreversible !
 
 ## Usage
 
