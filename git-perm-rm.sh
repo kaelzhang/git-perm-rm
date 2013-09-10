@@ -190,14 +190,16 @@ done
 
 # --------------------------------------------------------------------------------------------------------
 
-if [[ -z "$1" ]];then
+if [[ ${#REMAINS[@]} = "0" ]];then
     echo "Please provide a path!"
     exit 1
 fi
 
+echo ${REMAINS[@]}
+
 for file in ${REMAINS[@]}
 do
-    read -p "This operation will permanent remove ${file} from your git repository, are you sure?(y/n) " -n 1 -r
+    read -p "This operation will permanent remove \"${file}\" from your git repository, are you sure?(y/n) " -n 1 -r
 
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         git filter-branch --force --index-filter "git rm --cached --ignore-unmatch ${file}${RECURSIVE}"  --prune-empty --tag-name-filter cat -- --all
