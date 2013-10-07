@@ -195,8 +195,6 @@ if [[ ${#REMAINS[@]} = "0" ]];then
     exit 1
 fi
 
-echo ${REMAINS[@]}
-
 for file in ${REMAINS[@]}
 do
     read -p "This operation will permanent remove \"${file}\" from your git repository, are you sure?(y/n) " -n 1 -r
