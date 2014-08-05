@@ -198,6 +198,7 @@ fi
 for file in ${REMAINS[@]}
 do
     read -p "This operation will permanent remove \"${file}\" from your git repository, are you sure?(y/n) " -n 1 -r
+    echo
 
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         git filter-branch --force --index-filter "git rm --cached --ignore-unmatch ${file}${RECURSIVE}"  --prune-empty --tag-name-filter cat -- --all
