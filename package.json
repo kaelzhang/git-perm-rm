@@ -1,6 +1,6 @@
 {
   "name": "git-perm-rm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Permanently remove a file or directory from a git repo including all related commit records.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

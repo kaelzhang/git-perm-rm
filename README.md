@@ -20,9 +20,15 @@ cd /your/repo
 git-perm-rm index.js
 ```
 
-## Installation
+## Install
 
-Edit your `~/.bashrc` file, add the following code
+Install with npm
+
+```sh
+npm install -g git-perm-rm
+```
+
+Or, clone the repo, edit your `~/.bashrc` file, add the following code:
 
 ```sh
 alias="bash /your/repo/git-perm-rm.sh"
